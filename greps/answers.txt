@@ -1,36 +1,66 @@
 # Part 1
-### a)
-
-
-
+### a) 
+^.*\brill\s*$
+^.*\berfree\s*$
+^.*\btoise\s*$
+^.*\basaur\s*$
+^.*\bmander\s*$
+^.*\bizard\s*$
+^.*\bmeleon\s*$
+^.*\bchu\s*$
+^.*\baur\s*$
+^.*\blypuff\s*$
+^.*\bth\s*$
+^.*\bsaur\s*$
+^.*\bortle\s*$
+^.*\brtle\s*$
+^.*\buck\s*$
 
 ### b)
 
 
 
 ### c)
+file 1
+beedrill 
+blastoise
+bulbasaur
+butterfree
 
+file 2
+charizard
+charmander
+charmeleon
 
+file 3
+ivysaur
+jigglypuff
+meowth
+pickachu
 
-
-
-
-
-
-
-
-
+file4
+psyduck
+squirtle
+venusaur
+wartortle
 
 
 # Part 2
 ### a)
 
+15
+find ./captured -type f -name "*.txt" | ggrep -c .
 
 
 
 
 
 ### b)
+40 pickachu
+40 beedrill
+40 charizard
+
+find ./captured -type f -name "*.txt" -print0 | xargs -0 -I{} sh -c 'echo "$(ggrep -c "^" "{}") $(basename "{}" .txt)"'
 
 
 
